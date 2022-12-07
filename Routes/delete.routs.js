@@ -1,5 +1,6 @@
 const express = require('express')
 const db = require('../conectando_db')
+const { response } = require('express')
 
 const deletar = express.Router()
 
@@ -9,6 +10,7 @@ deletar.delete('/:id', async(req,res)=>{
     .deleteCustomer(id)
     .then()
     console.log(deletar);
+    return res.status(204).send()
 })
 
 module.exports = deletar

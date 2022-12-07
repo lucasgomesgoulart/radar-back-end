@@ -11,6 +11,7 @@ update.put('/:id', async (req, res) => {
         .updateCustomer(id, { name: name, sex: sex, datebirthday: datebirthday, phone: phone, email: email })
         .then()
     console.log(update);
+    return res.status().send()
 })
 
 module.exports = update
